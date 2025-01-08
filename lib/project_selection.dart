@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:process_run/process_run.dart';
 
 class ProjectSelection extends StatefulWidget {
   const ProjectSelection({super.key});
@@ -15,14 +16,38 @@ class ProjectSelectionState extends State<ProjectSelection> {
 
   Future<void> _pickDirectory() async {
     String? directoryPath = await FilePicker.platform.getDirectoryPath();
-
+    String pathFromUserDir = directoryPath!.split('/').sublist(3).join('/');
     // check directory have pubspec.yaml file or not
-    bool isPubspecFileExist = await File('$directoryPath/pubspec.yaml').exists();
+    bool isPubspecFileExist = await File('/$pathFromUserDir/pubspec.yaml').exists();
     if (!isPubspecFileExist && mounted) {
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Selected directory does not contain pubspec.yaml file.')));
+      ScaffoldMessenger.of(context)
+          .showSnackBar(SnackBar(content: Text('Selected directory does not contain pubspec.yaml file.')));
     }
+    print('cd $directoryPath');
     if (directoryPath != null) {
+      var shell = Shell();
+
+      await shell.run('''
+      
+      cd /$pathFromUserDir
+      # Display some text
+      echo Hello
+      
+      # Display dart version
+      dart --version
+      
+      # Display pub version
+      flutter pub --version
+      
+      # Adding google_maps_flutter dependency in pubspec.yaml file
+      flutter pub add google_maps_flutter
+      
+      # Run pub get command
+      flutter pub get
+      
+      ''');
       _selectedDirectory = directoryPath;
+      /*
       File file = File('$directoryPath/pubspec.yaml');
       String contents = await file.readAsString();
       print(contents);
@@ -34,7 +59,7 @@ class ProjectSelectionState extends State<ProjectSelection> {
       }
       contents = lines.join('\n');
       await file.writeAsString(contents);
-      print(contents);
+      print(contents);*/
       setState(() {});
     }
   }
