@@ -32,7 +32,7 @@ extension Message on Status {
       case Status.none:
         return '';
       case Status.start:
-        return 'Adding API key to Info.plist';
+        return 'Adding permissions to Info.plist';
       case Status.completed:
         return 'Info.plist updated';
       case Status.failed:
@@ -47,7 +47,7 @@ extension Message on Status {
       case Status.start:
         return 'Adding API key to AppDelegate.swift';
       case Status.completed:
-        return 'AppDelegate.m updated';
+        return 'AppDelegate.swift updated';
       case Status.failed:
         return 'Failed to update AppDelegate.swift';
     }
@@ -58,7 +58,7 @@ extension Message on Status {
       case Status.none:
         return '';
       case Status.start:
-        return 'Adding sample screen';
+        return 'Adding sample screen to project';
       case Status.completed:
         return 'Sample screen added';
       case Status.failed:
