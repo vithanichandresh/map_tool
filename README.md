@@ -10,8 +10,7 @@ The goal of this task is to create a flexible setup that automates the integrati
 - Configure platform-specific settings (Android and iOS).
 - Make an example of usage of Google Map.
 
-![light](assets/light.png)
-![dark](assets/dark.png)
+![light](assets/light.png) ![dark](assets/dark.png)
 
 
 ## Task Steps
