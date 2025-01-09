@@ -31,7 +31,97 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
-    </application>
+    
+        <meta-data 
+            android:name="com.google.android.geo.API_KEY" 
+            android:value="YOUR KEY HERE"/>
+      
+
+        <meta-data 
+            android:name="com.google.android.geo.API_KEY" 
+            android:value="YOUR KEY HERE"/>
+      
+
+        <meta-data 
+            android:name="com.google.android.geo.API_KEY" 
+            android:value="YOUR KEY HERE"/>
+      
+
+        <meta-data 
+            android:name="com.google.android.geo.API_KEY" 
+            android:value="YOUR KEY HERE"/>
+      
+
+        <meta-data 
+            android:name="com.google.android.geo.API_KEY" 
+            android:value="YOUR KEY HERE"/>
+      
+
+        <meta-data 
+            android:name="com.google.android.geo.API_KEY" 
+            android:value="YOUR KEY HERE"/>
+      
+
+        <meta-data 
+            android:name="com.google.android.geo.API_KEY" 
+            android:value="YOUR KEY HERE"/>
+      
+
+        <meta-data 
+            android:name="com.google.android.geo.API_KEY" 
+            android:value="YOUR KEY HERE"/>
+      
+
+        <meta-data 
+            android:name="com.google.android.geo.API_KEY" 
+            android:value="YOUR KEY HERE"/>
+      
+
+        <meta-data 
+            android:name="com.google.android.geo.API_KEY" 
+            android:value="YOUR KEY HERE"/>
+      
+
+        <meta-data 
+            android:name="com.google.android.geo.API_KEY" 
+            android:value="YOUR KEY HERE"/>
+      
+
+        <meta-data 
+            android:name="com.google.android.geo.API_KEY" 
+            android:value="YOUR KEY HERE"/>
+      
+
+        <meta-data 
+            android:name="com.google.android.geo.API_KEY" 
+            android:value="YOUR KEY HERE"/>
+      
+
+        <meta-data 
+            android:name="com.google.android.geo.API_KEY" 
+            android:value="YOUR KEY HERE"/>
+      
+
+        <meta-data 
+            android:name="com.google.android.geo.API_KEY" 
+            android:value="YOUR KEY HERE"/>
+      
+
+        <meta-data 
+            android:name="com.google.android.geo.API_KEY" 
+            android:value="YOUR KEY HERE"/>
+      
+
+        <meta-data 
+            android:name="com.google.android.geo.API_KEY" 
+            android:value="YOUR KEY HERE"/>
+      
+
+        <meta-data 
+            android:name="com.google.android.geo.API_KEY" 
+            android:value="YOUR KEY HERE"/>
+      
+</application>
     <!-- Required to query activities that can process text, see:
          https://developer.android.com/training/package-visibility and
          https://developer.android.com/reference/android/content/Intent#ACTION_PROCESS_TEXT.
