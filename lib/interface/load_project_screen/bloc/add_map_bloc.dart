@@ -39,8 +39,12 @@ class AddMapBloc extends Bloc<AddMapEvents, AddMapState> {
       dialogTitle: 'Navigate to the Flutter directory and then enter the bin folder.',
     );
     if (directoryPath != null) {
-      int i = directoryPath.indexOf('/Users');
-      directoryPath = directoryPath.substring(i);
+      if(Platform.isMacOS) {
+        int i = directoryPath.indexOf('/Users');
+        if(i > -1) {
+          directoryPath = directoryPath.substring(i);
+        }
+      }
       File file = File('$directoryPath/flutter');
       if (await file.exists()) {
         flutterDirPath = '$directoryPath/flutter';
@@ -58,8 +62,12 @@ class AddMapBloc extends Bloc<AddMapEvents, AddMapState> {
       dialogTitle: 'Navigate to the Flutter project directory.',
     );
     if (directoryPath != null) {
-      int i = directoryPath.indexOf('/Users');
-      directoryPath = directoryPath.substring(i);
+      if(Platform.isMacOS) {
+        int i = directoryPath.indexOf('/Users');
+        if(i > -1) {
+          directoryPath = directoryPath.substring(i);
+        }
+      }
       File file = File('$directoryPath/pubspec.yaml');
       if (await file.exists()) {
         projectPath = directoryPath;
