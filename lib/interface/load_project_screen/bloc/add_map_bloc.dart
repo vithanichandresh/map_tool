@@ -88,7 +88,6 @@ class AddMapBloc extends Bloc<AddMapEvents, AddMapState> {
         shell = shell.cd(projectDir);
         await shell.run('$sdk pub add google_maps_flutter');
         await shell.run('$sdk pub get');
-        await shell.run('pwd');
         shell.kill();
         emit(state.copyWith(isLoading: false, pugGetStatus: Status.completed, errorMessage: ''));
       }
