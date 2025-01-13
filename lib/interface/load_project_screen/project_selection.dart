@@ -99,7 +99,7 @@ class ProjectSelectionState extends State<ProjectSelection> {
                               isSelected: state.sdkPath.isEmpty,
                               isCompleted: state.sdkPath.isNotEmpty,
                               icon: Icons.folder_open,
-                              title: 'Select Flutter SDK',
+                              title: 'Select Flutter SDK bin folder',
                               onTap: () {
                                 if (!state.isLoading) {
                                   context.read<AddMapBloc>().add(PickFlutterSdk());
