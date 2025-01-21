@@ -244,7 +244,8 @@ class AddMapBloc extends Bloc<AddMapEvents, AddMapState> {
 
       Shell shell = Shell();
       shell = shell.cd(state.projectPath);
-      await shell.run('flutter pub get');
+      String sdk = state.sdkPath;
+      await shell.run('$sdk pub get');
       shell.kill();
       emit(state.copyWith(isLoading: false, addSampleScreenStatus: Status.completed, errorMessage: ''));
     } catch (e) {
