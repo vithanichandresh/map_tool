@@ -1,6 +1,7 @@
 import 'package:desktop_window/desktop_window.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:map_tool/app/TestScreen.dart';
 import 'package:map_tool/infrastructure/theme/theme.dart';
 import 'package:map_tool/interface/load_project_screen/bloc/add_map_bloc.dart';
 
@@ -40,6 +41,7 @@ class MyApp extends StatelessWidget {
             home: MediaQuery(
               data: MediaQuery.of(context).copyWith(textScaler: TextScaler.linear(1.0)),
               child: ProjectSelection(),
+              // child: TestScreen(),
             ),
           );
         },

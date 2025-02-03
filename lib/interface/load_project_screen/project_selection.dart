@@ -34,7 +34,7 @@ class ProjectSelectionState extends State<ProjectSelection> {
             padding: const EdgeInsets.symmetric(horizontal: 10),
             child: AppBar(
               leading: Icon(Icons.code, size: 30),
-              title: const Text('Map Integrator'),
+              title: const Text('Dash Studio'),
               actions: [
                 TextButton.icon(
                   icon: Icon(context.isDark ? Icons.light_mode : Icons.dark_mode),
@@ -74,12 +74,12 @@ class ProjectSelectionState extends State<ProjectSelection> {
                         children: [
                           SizedBox(height: 30),
                           Text(
-                            'Google Map Integration Simplified',
+                            'Integration Simplified',
                             style: context.titleLarge,
                           ),
                           SizedBox(height: 8),
                           Text(
-                            'Effortlessly add Google Maps to your Flutter projects in just three steps!',
+                            'Effortlessly add features to your Flutter project',
                             style: context.bodyMedium?.copyWith(
                               color: context.shadowColor,
                             ),
